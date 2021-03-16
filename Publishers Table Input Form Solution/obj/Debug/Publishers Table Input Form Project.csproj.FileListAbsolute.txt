@@ -31,3 +31,4 @@ C:\Users\Dharla\Documents\Books-Database-Management-System\Publishers Table Inpu
 C:\Users\Dharla\Documents\Books-Database-Management-System\Publishers Table Input Form Solution\obj\Debug\Publishers Table Input Form Project.csproj.CoreCompileInputs.cache
 C:\Users\Dharla\Documents\Books-Database-Management-System\Publishers Table Input Form Solution\obj\Debug\Authors Table Input Form Project.exe
 C:\Users\Dharla\Documents\Books-Database-Management-System\Publishers Table Input Form Solution\obj\Debug\Authors Table Input Form Project.pdb
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\Publishers Table Input Form Solution\obj\Debug\Authors_Table_Input_Form_Project.frmAuthors.resources

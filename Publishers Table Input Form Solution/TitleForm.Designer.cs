@@ -35,7 +35,6 @@ namespace Authors_Table_Input_Form_Project
             this.txtYear = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.txtISBN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -58,12 +57,26 @@ namespace Authors_Table_Input_Form_Project
             this.btnLast = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
             this.grpFindTitle = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtFind = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
+            this.txtFind = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cboPublisher = new System.Windows.Forms.ComboBox();
             this.btnPublishers = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cboAuthor1 = new System.Windows.Forms.ComboBox();
+            this.cboAuthor2 = new System.Windows.Forms.ComboBox();
+            this.cboAuthor3 = new System.Windows.Forms.ComboBox();
+            this.cboAuthor4 = new System.Windows.Forms.ComboBox();
+            this.btnXAuthor1 = new System.Windows.Forms.Button();
+            this.btnXAuthor2 = new System.Windows.Forms.Button();
+            this.btnXAuthor3 = new System.Windows.Forms.Button();
+            this.btnXAuthor4 = new System.Windows.Forms.Button();
+            this.btnAuthors = new System.Windows.Forms.Button();
+            this.txtISBN = new System.Windows.Forms.MaskedTextBox();
             this.grpFindTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +103,7 @@ namespace Authors_Table_Input_Form_Project
             // 
             this.txtYear.BackColor = System.Drawing.Color.White;
             this.txtYear.Location = new System.Drawing.Point(142, 50);
+            this.txtYear.MaxLength = 4;
             this.txtYear.Name = "txtYear";
             this.txtYear.ReadOnly = true;
             this.txtYear.Size = new System.Drawing.Size(57, 20);
@@ -110,17 +124,6 @@ namespace Authors_Table_Input_Form_Project
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Year Published";
-            // 
-            // txtISBN
-            // 
-            this.txtISBN.BackColor = System.Drawing.Color.White;
-            this.txtISBN.Location = new System.Drawing.Point(243, 50);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.ReadOnly = true;
-            this.txtISBN.Size = new System.Drawing.Size(226, 20);
-            this.txtISBN.TabIndex = 2;
-            this.txtISBN.Text = " ";
-            this.txtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label3
             // 
@@ -235,7 +238,7 @@ namespace Authors_Table_Input_Form_Project
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(327, 20);
-            this.txtDescription.TabIndex = 3;
+            this.txtDescription.TabIndex = 8;
             this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label5
@@ -254,7 +257,7 @@ namespace Authors_Table_Input_Form_Project
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.ReadOnly = true;
             this.txtNotes.Size = new System.Drawing.Size(327, 20);
-            this.txtNotes.TabIndex = 4;
+            this.txtNotes.TabIndex = 9;
             this.txtNotes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label6
@@ -273,7 +276,7 @@ namespace Authors_Table_Input_Form_Project
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.ReadOnly = true;
             this.txtSubject.Size = new System.Drawing.Size(327, 20);
-            this.txtSubject.TabIndex = 5;
+            this.txtSubject.TabIndex = 10;
             this.txtSubject.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label7
@@ -292,7 +295,7 @@ namespace Authors_Table_Input_Form_Project
             this.txtComments.Name = "txtComments";
             this.txtComments.ReadOnly = true;
             this.txtComments.Size = new System.Drawing.Size(327, 20);
-            this.txtComments.TabIndex = 6;
+            this.txtComments.TabIndex = 11;
             this.txtComments.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // btnHelp
@@ -337,23 +340,6 @@ namespace Authors_Table_Input_Form_Project
             this.grpFindTitle.TabStop = false;
             this.grpFindTitle.Text = "Find Title";
             // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(11, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 31);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Type first few letters of Title";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtFind
-            // 
-            this.txtFind.Location = new System.Drawing.Point(11, 54);
-            this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(100, 20);
-            this.txtFind.TabIndex = 1;
-            this.txtFind.TabStop = false;
-            // 
             // btnFind
             // 
             this.btnFind.Location = new System.Drawing.Point(22, 86);
@@ -364,6 +350,23 @@ namespace Authors_Table_Input_Form_Project
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // txtFind
+            // 
+            this.txtFind.Location = new System.Drawing.Point(11, 54);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(100, 20);
+            this.txtFind.TabIndex = 1;
+            this.txtFind.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(11, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 31);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Type first few letters of Title";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label9
             // 
@@ -382,7 +385,8 @@ namespace Authors_Table_Input_Form_Project
             this.cboPublisher.Location = new System.Drawing.Point(142, 168);
             this.cboPublisher.Name = "cboPublisher";
             this.cboPublisher.Size = new System.Drawing.Size(327, 21);
-            this.cboPublisher.TabIndex = 26;
+            this.cboPublisher.TabIndex = 7;
+            this.cboPublisher.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboPublisher_KeyPress);
             // 
             // btnPublishers
             // 
@@ -394,11 +398,168 @@ namespace Authors_Table_Input_Form_Project
             this.btnPublishers.UseVisualStyleBackColor = true;
             this.btnPublishers.Click += new System.EventHandler(this.btnPublishers_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(37, 96);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Author 1";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(37, 133);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Author 2";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(262, 96);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Author 3";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(262, 133);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Author 4";
+            // 
+            // cboAuthor1
+            // 
+            this.cboAuthor1.BackColor = System.Drawing.Color.White;
+            this.cboAuthor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAuthor1.FormattingEnabled = true;
+            this.cboAuthor1.Location = new System.Drawing.Point(99, 88);
+            this.cboAuthor1.Name = "cboAuthor1";
+            this.cboAuthor1.Size = new System.Drawing.Size(121, 21);
+            this.cboAuthor1.TabIndex = 3;
+            this.cboAuthor1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboAuthor_KeyPress);
+            // 
+            // cboAuthor2
+            // 
+            this.cboAuthor2.BackColor = System.Drawing.Color.White;
+            this.cboAuthor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAuthor2.FormattingEnabled = true;
+            this.cboAuthor2.Location = new System.Drawing.Point(99, 125);
+            this.cboAuthor2.Name = "cboAuthor2";
+            this.cboAuthor2.Size = new System.Drawing.Size(121, 21);
+            this.cboAuthor2.TabIndex = 4;
+            this.cboAuthor2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboAuthor_KeyPress);
+            // 
+            // cboAuthor3
+            // 
+            this.cboAuthor3.BackColor = System.Drawing.Color.White;
+            this.cboAuthor3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAuthor3.FormattingEnabled = true;
+            this.cboAuthor3.Location = new System.Drawing.Point(315, 88);
+            this.cboAuthor3.Name = "cboAuthor3";
+            this.cboAuthor3.Size = new System.Drawing.Size(126, 21);
+            this.cboAuthor3.TabIndex = 5;
+            this.cboAuthor3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboAuthor_KeyPress);
+            // 
+            // cboAuthor4
+            // 
+            this.cboAuthor4.BackColor = System.Drawing.Color.White;
+            this.cboAuthor4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAuthor4.FormattingEnabled = true;
+            this.cboAuthor4.Location = new System.Drawing.Point(315, 125);
+            this.cboAuthor4.Name = "cboAuthor4";
+            this.cboAuthor4.Size = new System.Drawing.Size(126, 21);
+            this.cboAuthor4.TabIndex = 6;
+            this.cboAuthor4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboAuthor_KeyPress);
+            // 
+            // btnXAuthor1
+            // 
+            this.btnXAuthor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXAuthor1.Location = new System.Drawing.Point(226, 88);
+            this.btnXAuthor1.Name = "btnXAuthor1";
+            this.btnXAuthor1.Size = new System.Drawing.Size(21, 21);
+            this.btnXAuthor1.TabIndex = 36;
+            this.btnXAuthor1.Text = "X";
+            this.btnXAuthor1.UseVisualStyleBackColor = true;
+            this.btnXAuthor1.Click += new System.EventHandler(this.btnXAuthor_Click);
+            // 
+            // btnXAuthor2
+            // 
+            this.btnXAuthor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXAuthor2.Location = new System.Drawing.Point(226, 125);
+            this.btnXAuthor2.Name = "btnXAuthor2";
+            this.btnXAuthor2.Size = new System.Drawing.Size(21, 21);
+            this.btnXAuthor2.TabIndex = 37;
+            this.btnXAuthor2.Text = "X";
+            this.btnXAuthor2.UseVisualStyleBackColor = true;
+            this.btnXAuthor2.Click += new System.EventHandler(this.btnXAuthor_Click);
+            // 
+            // btnXAuthor3
+            // 
+            this.btnXAuthor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXAuthor3.Location = new System.Drawing.Point(448, 88);
+            this.btnXAuthor3.Name = "btnXAuthor3";
+            this.btnXAuthor3.Size = new System.Drawing.Size(21, 21);
+            this.btnXAuthor3.TabIndex = 38;
+            this.btnXAuthor3.Text = "X";
+            this.btnXAuthor3.UseVisualStyleBackColor = true;
+            this.btnXAuthor3.Click += new System.EventHandler(this.btnXAuthor_Click);
+            // 
+            // btnXAuthor4
+            // 
+            this.btnXAuthor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXAuthor4.Location = new System.Drawing.Point(448, 125);
+            this.btnXAuthor4.Name = "btnXAuthor4";
+            this.btnXAuthor4.Size = new System.Drawing.Size(21, 21);
+            this.btnXAuthor4.TabIndex = 39;
+            this.btnXAuthor4.Text = "X";
+            this.btnXAuthor4.UseVisualStyleBackColor = true;
+            this.btnXAuthor4.Click += new System.EventHandler(this.btnXAuthor_Click);
+            // 
+            // btnAuthors
+            // 
+            this.btnAuthors.Location = new System.Drawing.Point(131, 396);
+            this.btnAuthors.Name = "btnAuthors";
+            this.btnAuthors.Size = new System.Drawing.Size(89, 23);
+            this.btnAuthors.TabIndex = 40;
+            this.btnAuthors.Text = "Authors";
+            this.btnAuthors.UseVisualStyleBackColor = true;
+            this.btnAuthors.Click += new System.EventHandler(this.btnAuthors_Click);
+            // 
+            // txtISBN
+            // 
+            this.txtISBN.Location = new System.Drawing.Point(244, 49);
+            this.txtISBN.Mask = ">A-AAAAAAA-A-A";
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(225, 20);
+            this.txtISBN.TabIndex = 2;
+            this.txtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtISBN_KeyPress);
+            // 
             // frmTitles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 446);
+            this.Controls.Add(this.txtISBN);
+            this.Controls.Add(this.btnAuthors);
+            this.Controls.Add(this.btnXAuthor4);
+            this.Controls.Add(this.btnXAuthor3);
+            this.Controls.Add(this.btnXAuthor2);
+            this.Controls.Add(this.btnXAuthor1);
+            this.Controls.Add(this.cboAuthor4);
+            this.Controls.Add(this.cboAuthor3);
+            this.Controls.Add(this.cboAuthor2);
+            this.Controls.Add(this.cboAuthor1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnPublishers);
             this.Controls.Add(this.cboPublisher);
             this.Controls.Add(this.label9);
@@ -423,7 +584,6 @@ namespace Authors_Table_Input_Form_Project
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.txtTitle);
@@ -450,7 +610,6 @@ namespace Authors_Table_Input_Form_Project
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
@@ -479,6 +638,20 @@ namespace Authors_Table_Input_Form_Project
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboPublisher;
         private System.Windows.Forms.Button btnPublishers;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cboAuthor1;
+        private System.Windows.Forms.ComboBox cboAuthor2;
+        private System.Windows.Forms.ComboBox cboAuthor3;
+        private System.Windows.Forms.ComboBox cboAuthor4;
+        private System.Windows.Forms.Button btnXAuthor1;
+        private System.Windows.Forms.Button btnXAuthor2;
+        private System.Windows.Forms.Button btnXAuthor3;
+        private System.Windows.Forms.Button btnXAuthor4;
+        private System.Windows.Forms.Button btnAuthors;
+        private System.Windows.Forms.MaskedTextBox txtISBN;
     }
 }
 
