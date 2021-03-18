@@ -30,6 +30,7 @@ namespace Authors_Table_Input_Form_Project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTitles));
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -77,7 +78,12 @@ namespace Authors_Table_Input_Form_Project
             this.btnXAuthor4 = new System.Windows.Forms.Button();
             this.btnAuthors = new System.Windows.Forms.Button();
             this.txtISBN = new System.Windows.Forms.MaskedTextBox();
+            this.btnPrintRecord = new System.Windows.Forms.Button();
+            this.picBooks = new System.Windows.Forms.PictureBox();
+            this.btnPrintTitles = new System.Windows.Forms.Button();
+            this.dlgPreview = new System.Windows.Forms.PrintPreviewDialog();
             this.grpFindTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -541,11 +547,55 @@ namespace Authors_Table_Input_Form_Project
             this.txtISBN.TabIndex = 2;
             this.txtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtISBN_KeyPress);
             // 
+            // btnPrintRecord
+            // 
+            this.btnPrintRecord.Location = new System.Drawing.Point(251, 426);
+            this.btnPrintRecord.Name = "btnPrintRecord";
+            this.btnPrintRecord.Size = new System.Drawing.Size(89, 23);
+            this.btnPrintRecord.TabIndex = 41;
+            this.btnPrintRecord.Text = "Print &Record";
+            this.btnPrintRecord.UseVisualStyleBackColor = true;
+            this.btnPrintRecord.Click += new System.EventHandler(this.btnPrintRecord_Click);
+            // 
+            // picBooks
+            // 
+            this.picBooks.Image = ((System.Drawing.Image)(resources.GetObject("picBooks.Image")));
+            this.picBooks.Location = new System.Drawing.Point(356, 426);
+            this.picBooks.Name = "picBooks";
+            this.picBooks.Size = new System.Drawing.Size(85, 32);
+            this.picBooks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBooks.TabIndex = 42;
+            this.picBooks.TabStop = false;
+            this.picBooks.Visible = false;
+            // 
+            // btnPrintTitles
+            // 
+            this.btnPrintTitles.Location = new System.Drawing.Point(131, 425);
+            this.btnPrintTitles.Name = "btnPrintTitles";
+            this.btnPrintTitles.Size = new System.Drawing.Size(89, 23);
+            this.btnPrintTitles.TabIndex = 43;
+            this.btnPrintTitles.Text = "Print &Titles";
+            this.btnPrintTitles.UseVisualStyleBackColor = true;
+            this.btnPrintTitles.Click += new System.EventHandler(this.btnPrintTitles_Click);
+            // 
+            // dlgPreview
+            // 
+            this.dlgPreview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.dlgPreview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.dlgPreview.ClientSize = new System.Drawing.Size(400, 300);
+            this.dlgPreview.Enabled = true;
+            this.dlgPreview.Icon = ((System.Drawing.Icon)(resources.GetObject("dlgPreview.Icon")));
+            this.dlgPreview.Name = "dlgPreview";
+            this.dlgPreview.Visible = false;
+            // 
             // frmTitles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 446);
+            this.ClientSize = new System.Drawing.Size(481, 460);
+            this.Controls.Add(this.btnPrintTitles);
+            this.Controls.Add(this.picBooks);
+            this.Controls.Add(this.btnPrintRecord);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.btnAuthors);
             this.Controls.Add(this.btnXAuthor4);
@@ -598,6 +648,7 @@ namespace Authors_Table_Input_Form_Project
             this.Load += new System.EventHandler(this.frmTitles_Load);
             this.grpFindTitle.ResumeLayout(false);
             this.grpFindTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -652,6 +703,10 @@ namespace Authors_Table_Input_Form_Project
         private System.Windows.Forms.Button btnXAuthor4;
         private System.Windows.Forms.Button btnAuthors;
         private System.Windows.Forms.MaskedTextBox txtISBN;
+        private System.Windows.Forms.Button btnPrintRecord;
+        private System.Windows.Forms.PictureBox picBooks;
+        private System.Windows.Forms.Button btnPrintTitles;
+        private System.Windows.Forms.PrintPreviewDialog dlgPreview;
     }
 }
 
