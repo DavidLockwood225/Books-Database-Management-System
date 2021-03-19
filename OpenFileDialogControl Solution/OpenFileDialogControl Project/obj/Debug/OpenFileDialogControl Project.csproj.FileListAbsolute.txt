@@ -1,0 +1,10 @@
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\bin\Debug\OpenFileDialogControl Project.exe.config
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\bin\Debug\OpenFileDialogControl Project.exe
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\bin\Debug\OpenFileDialogControl Project.pdb
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl Project.csprojAssemblyReference.cache
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl_Project.frmTitles.resources
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl_Project.Properties.Resources.resources
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl Project.csproj.GenerateResource.cache
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl Project.csproj.CoreCompileInputs.cache
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl Project.exe
+C:\Users\dlockwood024548\Documents\Books-Database-Management-System\OpenFileDialogControl Solution\OpenFileDialogControl Project\obj\Debug\OpenFileDialogControl Project.pdb
